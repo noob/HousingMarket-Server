@@ -24,7 +24,7 @@ public class HttpUtil {
 	 * request数据解析类
 	 * 将gson转换为map<String, ？>
 	 */
-	public static Map<String, ?> ParseDataToMap(HttpServletRequest request) {
+	public static Map<String, String> ParseDataToMap(HttpServletRequest request) {
 		BufferedReader bufferedReader;
 		gson = new Gson();
 		Map<String, String> map = null;
@@ -46,7 +46,7 @@ public class HttpUtil {
 		try {
 			response.setCharacterEncoding("UTF-8");
 			response.setHeader("Cache-Control", "no-cache");
-			response.setHeader("Content-type", "text/xml; charset=UTF-8");
+			response.setHeader("Content-type", "application/json; charset=UTF-8");
 			OutputStream outputStream = response.getOutputStream();
 //			PrintWriter printWriter = new PrintWriter(outputStream);
 //			printWriter.print(msg);
@@ -65,9 +65,15 @@ public class HttpUtil {
 		try {
 			response.setCharacterEncoding("UTF-8");
 			response.setHeader("Cache-Control", "no-cache");
-			response.setHeader("Content-type", "text/xml; charset=UTF-8");
+			response.setHeader("Content-type", "application/json; charset=UTF-8");
+			//"*"存在风险，建议指定可信任的域名来接收响应信息，如"http://www.sosoapi.com"
+			response.addHeader("Access-Control-Allow-Origin", "*");
+			//如果存在自定义的header参数，需要在此处添加，逗号分隔
+			response.addHeader("Access-Control-Allow-Headers", "Origin, No-Cache, X-Requested-With, "
+					+ "If-Modified-Since, Pragma, Last-Modified, Cache-Control, Expires, "
+					+ "Content-Type, X-E4M-With");
+			response.addHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");  
 			OutputStream outputStream = response.getOutputStream();
-			System.out.println("-----------" + outputStream + "-------------");
 			PrintWriter printWriter = new PrintWriter(outputStream);
 			printWriter.print(msg);
 			printWriter.flush();

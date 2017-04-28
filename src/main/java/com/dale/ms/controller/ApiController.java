@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.dale.ms.controller.generic.GenericController;
+import com.dale.ms.entities.TUser;
+import com.dale.ms.utils.HttpUtil;
+import com.google.gson.Gson;
 import com.wordnik.swagger.annotations.ApiOperation;
 
 
@@ -23,23 +26,15 @@ public class ApiController extends GenericController{
 
 	public static final String SUCCESS = "success";
 	public static final String ERROR = "error";
-	
-	@RequestMapping(value="/user/{id}",method=RequestMethod.GET)
-	@ResponseBody
-	@ApiOperation(value = "根据用户名获取用户对象", httpMethod = "GET", response = String.class, notes = "根据用户名获取用户对象")
-    public void get(@PathVariable Integer id,PrintWriter pw){
-        System.out.println("get"+id);
-        pw.print("hello:"+id);
-    }
-	
+	Gson gson = new Gson();
 	
 	@RequestMapping(value="/findById/{userId}")
 	@ResponseBody
-	 public void findById(@PathVariable String userId, PrintWriter pw){
-		System.out.println("-------------------------");
+	 public void findById(@PathVariable String userId){
 	        System.out.println("get "+userId);
-	        pw.print("mike");
-//	        return "mike";
+	        TUser user = new TUser();
+	        user.setRealName("Mr.H");
+	        HttpUtil.responsePrintMsg(response, gson.toJson(user));
 	    }
 	
 }

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import com.dale.ms.controller.generic.GenericController;
 import com.dale.ms.dataparse.impl.HttpDataParseImpl;
-import com.dale.ms.service.AdminUserService;
+import com.dale.ms.handle.TaskDistribution;
 import com.dale.ms.utils.HttpUtil;
 import com.dale.ms.utils.ThreadPoolUtil;
 import com.google.gson.Gson;
@@ -27,17 +27,22 @@ public class MainController extends GenericController{
 	Gson gson = new Gson();
 	
 	@Autowired
-	@Qualifier("adminUserService")
-	private AdminUserService adminUserService;
+	@Qualifier("taskDistribution")
+	public static TaskDistribution taskDistribution;
 	
 	@RequestMapping(value = "/request")
 	public void Request() {
-		
+		System.out.println("-------------------------");
 		try {
-			HttpDataParseImpl httpDataParseImpl = new HttpDataParseImpl(request);
-			ThreadPoolUtil.init().execute(new Thread(){
+			final HttpDataParseImpl httpDataParseImpl = new HttpDataParseImpl(request);
+			ThreadPoolUtil.init().execute(new Thread(new Runnable() {
 				
-			});
+				@Override
+				public void run() {
+					taskDistribution.taskAnalysisAndDistribute(httpDataParseImpl);
+				}
+			}));
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

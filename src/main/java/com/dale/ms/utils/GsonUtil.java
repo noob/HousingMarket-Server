@@ -16,7 +16,7 @@ import com.google.gson.reflect.TypeToken;
  */
 public class GsonUtil {
 
-	Gson gson = new Gson();
+	private static Gson gson = new Gson();
 	
 	/**
 	 *   Map to Gson
@@ -53,7 +53,7 @@ public class GsonUtil {
 	 * @param str
 	 * @return
 	 */
-	public Map<String, Object> gson2Map(String str) {
+	public static Map<String, Object> gson2Map(String str) {
 		Map<String, Object> map = gson.fromJson(str, new TypeToken<Map<String, Object>>(){}.getType());
 		return map;
 	}

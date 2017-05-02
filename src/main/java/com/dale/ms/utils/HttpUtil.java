@@ -35,6 +35,7 @@ public class HttpUtil {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		System.out.println(data);
 		map = gson.fromJson(data, new TypeToken<Map<String, ?>>(){}.getType());
 		return map;
 	}

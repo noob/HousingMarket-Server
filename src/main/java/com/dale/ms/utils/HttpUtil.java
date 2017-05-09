@@ -35,6 +35,7 @@ public class HttpUtil {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
+		System.out.println(data);
 		map = gson.fromJson(data, new TypeToken<Map<String, ?>>(){}.getType());
 		return map;
 	}
@@ -46,13 +47,13 @@ public class HttpUtil {
 		try {
 			response.setCharacterEncoding("UTF-8");
 			response.setHeader("Cache-Control", "no-cache");
-			response.setHeader("Content-type", "application/json; charset=UTF-8");
+			response.setHeader("Content-type", "text/html; charset=UTF-8");
 			OutputStream outputStream = response.getOutputStream();
 //			PrintWriter printWriter = new PrintWriter(outputStream);
 //			printWriter.print(msg);
 //			printWriter.flush();
 			outputStream.write(msg.getBytes("UTF-8"));
-			outputStream.close();
+//			outputStream.close();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -65,20 +66,26 @@ public class HttpUtil {
 		try {
 			response.setCharacterEncoding("UTF-8");
 			response.setHeader("Cache-Control", "no-cache");
-			response.setHeader("Content-type", "application/json; charset=UTF-8");
-			//"*"存在风险，建议指定可信任的域名来接收响应信息，如"http://www.sosoapi.com"
-			response.addHeader("Access-Control-Allow-Origin", "*");
-			//如果存在自定义的header参数，需要在此处添加，逗号分隔
-			response.addHeader("Access-Control-Allow-Headers", "Origin, No-Cache, X-Requested-With, "
-					+ "If-Modified-Since, Pragma, Last-Modified, Cache-Control, Expires, "
-					+ "Content-Type, X-E4M-With");
-			response.addHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");  
+//			response.setHeader("Content-type", "application/json; charset=UTF-8");
+			response.setHeader("Content-type", "text/html; charset=UTF-8");
+//			//"*"存在风险，建议指定可信任的域名来接收响应信息，如"http://www.sosoapi.com"
+//			response.addHeader("Access-Control-Allow-Origin", "*");
+//			//如果存在自定义的header参数，需要在此处添加，逗号分隔
+//			response.addHeader("Access-Control-Allow-Headers", "Origin, No-Cache, X-Requested-With, "
+//					+ "If-Modified-Since, Pragma, Last-Modified, Cache-Control, Expires, "
+//					+ "Content-Type, X-E4M-With");
+//			response.addHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");  
 			OutputStream outputStream = response.getOutputStream();
 			PrintWriter printWriter = new PrintWriter(outputStream);
-			printWriter.print(msg);
-			printWriter.flush();
-			printWriter.close();
-		} catch (IOException e) {
+			printWriter.println(msg);
+//			if(printWriter != null) {
+//				System.out.println("printWriter is not null!!");
+//			}
+//			System.out.println("11111111111111111");
+//			printWriter.flush();
+//			System.out.println("2222222222222222");
+//			printWriter.close();
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}

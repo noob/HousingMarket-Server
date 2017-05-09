@@ -19,15 +19,19 @@ import com.dale.ms.utils.NetUtil;
  */
 public class DataParseBase implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -892708913600598000L;
 	protected Object resultObject; // 结果对象
-	protected String dataType; // 类型码 Buyer Or Seller
-	protected String cmd; // 业务码
+	protected String dataType; // 类型码 
+	protected String type; // 业务码 Buyer Or Seller
 	protected Object inputObject; // 输入对象
 	protected Map<String, Object> contents = new HashMap<String, Object>(); // 输入对象
 
 	// 使用HttpServletRequest初始化数据
 	public void initData(HttpServletRequest request) throws Exception {
-		cmd = request.getParameter("type");
+		type = request.getParameter("type");
 		contents.put("ip", NetUtil.getIpAddress(request));
 		inputObject = HttpUtil.ParseDataToMap(request);
 	}
@@ -48,12 +52,12 @@ public class DataParseBase implements Serializable {
 		this.dataType = dataType;
 	}
 
-	public String getCmd() {
-		return cmd;
+	public String getType() {
+		return type;
 	}
 
-	public void setCmd(String cmd) {
-		this.cmd = cmd;
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	public Object getInputObject() {
@@ -72,6 +76,4 @@ public class DataParseBase implements Serializable {
 		this.contents = contents;
 	}
 
-	
-	
 }

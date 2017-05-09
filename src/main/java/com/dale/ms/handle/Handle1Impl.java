@@ -5,7 +5,10 @@ package com.dale.ms.handle;
 
 import java.util.Map;
 
+<<<<<<< HEAD
 import com.dale.ms.entities.HmUser;
+=======
+>>>>>>> f42e15d758185e880610f91deb685ded138090ec
 import com.dale.ms.service.impl.MainServiceImpl;
 import com.dale.ms.utils.GlobalUtil;
 import com.dale.ms.utils.MyLogUtil;
@@ -36,8 +39,11 @@ public class Handle1Impl extends BaseHandle implements HandleInterface{
 		switch (cmd) {
 		case GlobalUtil.CMD_1:
 			resultData = "shake it, shake it";
+<<<<<<< HEAD
 			HmUser user = (HmUser) object;
 			System.out.println(user.getMobile());
+=======
+>>>>>>> f42e15d758185e880610f91deb685ded138090ec
 			break;
 
 		default:
@@ -60,7 +66,11 @@ public class Handle1Impl extends BaseHandle implements HandleInterface{
 		case GlobalUtil.CMD_1:
 			backData = resultData; //将业务运行结果赋值给返回值
 			break;
+<<<<<<< HEAD
 			
+=======
+
+>>>>>>> f42e15d758185e880610f91deb685ded138090ec
 		default:
 			MyLogUtil.print("未知 CMD，执行默认方法!");
 			break;

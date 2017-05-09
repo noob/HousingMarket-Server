@@ -10,8 +10,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.dale.ms.controller.generic.GenericController;
 import com.dale.ms.dataparse.impl.HttpDataParseImpl;
 import com.dale.ms.handle.TaskDistribution;
+<<<<<<< HEAD
 import com.dale.ms.status.TaskStatus;
 import com.dale.ms.status.TaskStatusMap;
+=======
+>>>>>>> f42e15d758185e880610f91deb685ded138090ec
 import com.dale.ms.utils.HttpUtil;
 import com.dale.ms.utils.ThreadPoolUtil;
 import com.google.gson.Gson;
@@ -31,6 +34,7 @@ public class MainController extends GenericController{
 	
 	@Autowired
 	@Qualifier("taskDistribution")
+<<<<<<< HEAD
 	public static TaskDistribution taskDistribution = new TaskDistribution();
 	
 	@RequestMapping(value = "/request")
@@ -39,10 +43,20 @@ public class MainController extends GenericController{
 		try {
 			final HttpDataParseImpl httpDataParseImpl = new HttpDataParseImpl(request);
 			TaskStatusMap.putTaskStatusForKey(uuid, TaskStatus.InQueue);
+=======
+	public static TaskDistribution taskDistribution;
+	
+	@RequestMapping(value = "/request")
+	public void Request() {
+		System.out.println("-------------------------");
+		try {
+			final HttpDataParseImpl httpDataParseImpl = new HttpDataParseImpl(request);
+>>>>>>> f42e15d758185e880610f91deb685ded138090ec
 			ThreadPoolUtil.init().execute(new Thread(new Runnable() {
 				
 				@Override
 				public void run() {
+<<<<<<< HEAD
 					taskDistribution.taskAnalysisAndDistribute(httpDataParseImpl, uuid);
 				}
 			}));
@@ -58,6 +72,12 @@ public class MainController extends GenericController{
 			}
 			HttpUtil.responsePrintMsg(response, TaskStatusMap.getTaskResultForKey(uuid));
 //			HttpUtil.responseOutMsg(response, TaskStatusMap.getTaskResultForKey(uuid));
+=======
+					taskDistribution.taskAnalysisAndDistribute(httpDataParseImpl);
+				}
+			}));
+			
+>>>>>>> f42e15d758185e880610f91deb685ded138090ec
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

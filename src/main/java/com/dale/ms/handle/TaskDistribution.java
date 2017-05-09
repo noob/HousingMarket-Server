@@ -13,12 +13,18 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Service;
 
+<<<<<<< HEAD
 import com.dale.ms.controller.MainController;
 import com.dale.ms.dataparse.DataParseBase;
 import com.dale.ms.entities.HmUser;
 import com.dale.ms.service.impl.MainServiceImpl;
 import com.dale.ms.status.TaskStatus;
 import com.dale.ms.status.TaskStatusMap;
+=======
+import com.dale.ms.dataparse.DataParseBase;
+import com.dale.ms.entities.HmUser;
+import com.dale.ms.service.impl.MainServiceImpl;
+>>>>>>> f42e15d758185e880610f91deb685ded138090ec
 import com.dale.ms.utils.GlobalUtil;
 import com.dale.ms.utils.GsonUtil;
 import com.dale.ms.utils.MyLogUtil;
@@ -36,6 +42,7 @@ public class TaskDistribution {
 	@Resource(name = "mainService")
 	private MainServiceImpl mainService;
 	
+<<<<<<< HEAD
 	public void taskAnalysisAndDistribute(DataParseBase dataParseBase, String uuid) {
 		Gson gson = new Gson();
 		String result = null;
@@ -44,6 +51,16 @@ public class TaskDistribution {
 		Class clazz = null;
 		try {
 			 Map<String, String> map = (Map<String, String>) dataParseBase.getInputObject();
+=======
+	public void taskAnalysisAndDistribute(DataParseBase dataParseBase) {
+		System.out.println("taskAnalysisAndDistribute is running");
+		Gson gson = new Gson();
+		String flag = dataParseBase.getType();
+		String obj = null;
+		Class clazz = null;
+		try {
+			 Map<String, String> map = gson.fromJson((String) dataParseBase.getInputObject(), new TypeToken<Map<String, String>>(){}.getType());
+>>>>>>> f42e15d758185e880610f91deb685ded138090ec
 			 int port = Integer.parseInt(map.get("port"));
 			 int cmd = Integer.parseInt(map.get("cmd"));
 			
@@ -53,6 +70,10 @@ public class TaskDistribution {
 				obj = gson.fromJson(map.get("user"), new TypeToken<HmUser>(){}.getType());
 			} 
 			
+<<<<<<< HEAD
+=======
+			
+>>>>>>> f42e15d758185e880610f91deb685ded138090ec
 			Class c = Class.forName("com.dale.ms.handle.Handle" + port + "Impl");
 			HandleInterface hIface = null;
 			switch (port) {
@@ -69,6 +90,7 @@ public class TaskDistribution {
 				break;
 			}
 		
+<<<<<<< HEAD
 			result = hIface.getResult(obj);
 			if (result != null) {
 				TaskStatusMap.putTaskResultForKey(uuid, result);
@@ -76,10 +98,22 @@ public class TaskDistribution {
 			TaskStatusMap.putTaskStatusForKey(uuid, TaskStatus.Complete);
 			
 			MainController.notifyResult();
+=======
+			String result = hIface.getResult(obj);
+			
+			
+			
+			
+			
+>>>>>>> f42e15d758185e880610f91deb685ded138090ec
 			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+<<<<<<< HEAD
+=======
+		
+>>>>>>> f42e15d758185e880610f91deb685ded138090ec
 	}
 	
 	

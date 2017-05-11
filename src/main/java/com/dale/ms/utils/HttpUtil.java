@@ -82,9 +82,15 @@ public class HttpUtil {
 //				System.out.println("printWriter is not null!!");
 //			}
 //			System.out.println("11111111111111111");
+<<<<<<< HEAD
 			printWriter.flush();
 //			System.out.println("2222222222222222");
 			printWriter.close();
+=======
+//			printWriter.flush();
+//			System.out.println("2222222222222222");
+//			printWriter.close();
+>>>>>>> 889a63e94037a79381ccdfe442f90f5073d73704
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

@@ -79,6 +79,7 @@
                 <comment>商家联系方式</comment>
             </column>
         </property>
+<<<<<<< HEAD
         <property name="getuiClientId" type="java.lang.String">
             <column name="GETUI_CLIENT_ID" length="100">
                 <comment>个推clientid</comment>
@@ -89,5 +90,7 @@
                 <comment>客户端类型</comment>
             </column>
         </property>
+=======
+>>>>>>> 889a63e94037a79381ccdfe442f90f5073d73704
     </class>
 </hibernate-mapping>

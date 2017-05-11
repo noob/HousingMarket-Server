@@ -20,6 +20,7 @@ public class GlobalUtil {
 	public final static int CMD_2 = 2; //
 	public final static int CMD_3 = 3; //
 	public final static int CMD_4 = 4; //
+<<<<<<< HEAD
 	
 	//个推 host 
 	public static final String host = "http://sdk.open.api.igexin.com/apiex.htm";
@@ -38,4 +39,7 @@ public class GlobalUtil {
 	public static final String STORE_APP_ID = "7Ujuss3Oz67uqVrzmi9Yv8";
 	public static final String STORE_APP_KEY = "8vZh4kUx9o80X3LPtgPl61";
 	public static final String STORE_MASTER_SECRET = "0aflY90LKM8FzGKjYVf4m4"; 
+=======
+	
+>>>>>>> 889a63e94037a79381ccdfe442f90f5073d73704
 }

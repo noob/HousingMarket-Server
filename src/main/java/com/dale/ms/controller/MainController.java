@@ -10,8 +10,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.dale.ms.controller.generic.GenericController;
 import com.dale.ms.dataparse.impl.HttpDataParseImpl;
 import com.dale.ms.handle.TaskDistribution;
+<<<<<<< HEAD
 import com.dale.ms.status.TaskStatus;
 import com.dale.ms.status.TaskStatusMap;
+=======
+<<<<<<< HEAD
+import com.dale.ms.status.TaskStatus;
+import com.dale.ms.status.TaskStatusMap;
+=======
+>>>>>>> f42e15d758185e880610f91deb685ded138090ec
+>>>>>>> 889a63e94037a79381ccdfe442f90f5073d73704
 import com.dale.ms.utils.HttpUtil;
 import com.dale.ms.utils.ThreadPoolUtil;
 import com.google.gson.Gson;
@@ -31,6 +39,10 @@ public class MainController extends GenericController{
 	
 	@Autowired
 	@Qualifier("taskDistribution")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 889a63e94037a79381ccdfe442f90f5073d73704
 	public static TaskDistribution taskDistribution = new TaskDistribution();
 	
 	@RequestMapping(value = "/request")
@@ -39,10 +51,26 @@ public class MainController extends GenericController{
 		try {
 			final HttpDataParseImpl httpDataParseImpl = new HttpDataParseImpl(request);
 			TaskStatusMap.putTaskStatusForKey(uuid, TaskStatus.InQueue);
+<<<<<<< HEAD
+=======
+=======
+	public static TaskDistribution taskDistribution;
+	
+	@RequestMapping(value = "/request")
+	public void Request() {
+		System.out.println("-------------------------");
+		try {
+			final HttpDataParseImpl httpDataParseImpl = new HttpDataParseImpl(request);
+>>>>>>> f42e15d758185e880610f91deb685ded138090ec
+>>>>>>> 889a63e94037a79381ccdfe442f90f5073d73704
 			ThreadPoolUtil.init().execute(new Thread(new Runnable() {
 				
 				@Override
 				public void run() {
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 889a63e94037a79381ccdfe442f90f5073d73704
 					taskDistribution.taskAnalysisAndDistribute(httpDataParseImpl, uuid);
 				}
 			}));
@@ -58,6 +86,15 @@ public class MainController extends GenericController{
 			}
 			HttpUtil.responsePrintMsg(response, TaskStatusMap.getTaskResultForKey(uuid));
 //			HttpUtil.responseOutMsg(response, TaskStatusMap.getTaskResultForKey(uuid));
+<<<<<<< HEAD
+=======
+=======
+					taskDistribution.taskAnalysisAndDistribute(httpDataParseImpl);
+				}
+			}));
+			
+>>>>>>> f42e15d758185e880610f91deb685ded138090ec
+>>>>>>> 889a63e94037a79381ccdfe442f90f5073d73704
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

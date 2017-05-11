@@ -38,6 +38,7 @@ public class Handle1Impl extends BaseHandle implements HandleInterface{
 			resultData = "shake it, shake it";
 			HmUser user = (HmUser) object;
 			System.out.println(user.getMobile());
+			
 			break;
 
 		default:

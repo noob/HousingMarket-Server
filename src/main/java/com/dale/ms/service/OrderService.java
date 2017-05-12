@@ -10,8 +10,7 @@ import org.springframework.stereotype.Service;
  * @date 2017-5-12 下午1:23:41
  * @description 
  */
-
-@Service("userService")
-public interface UserService {
+@Service("orderService")
+public interface OrderService {
 
 }

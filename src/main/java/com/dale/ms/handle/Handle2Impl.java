@@ -6,7 +6,7 @@ package com.dale.ms.handle;
 import java.util.Map;
 
 import com.dale.ms.entities.HmUser;
-import com.dale.ms.service.UserService;
+import com.dale.ms.service.StoreService;
 import com.dale.ms.service.impl.MainServiceImpl;
 import com.dale.ms.utils.GlobalUtil;
 import com.dale.ms.utils.MyLogUtil;
@@ -16,49 +16,43 @@ import com.dale.ms.utils.MyLogUtil;
  * @date 2017-5-2 下午3:23:07
  * @description 
  */
-public class Handle1Impl extends BaseHandle implements HandleInterface{
+public class Handle2Impl extends BaseHandle implements HandleInterface{
 
-	private UserService uerService;
+	private StoreService storeService;
 	private int cmd;
 	private String resultData;
 	
 	
 	
-	public Handle1Impl(Map<String, Object> contents, int cmd, UserService uerService) {
+	public Handle2Impl(Map<String, Object> contents, int cmd, StoreService storeService) {
 		this.contents = contents;
 		this.cmd = cmd;
-		this.uerService = uerService;
+		this.storeService = storeService;
 	}
 
 	/**
-	 *   用户程序入口
+	 *   商家程序入口
 	 */
 	public void parseContent() {
 		HmUser user = (HmUser) object;
 		switch (cmd) {
 		case GlobalUtil.CMD_1:
-			login();
-			break;
-		case GlobalUtil.CMD_2:
 			regist(user);
 			break;
+		case GlobalUtil.CMD_2:
+			login(user);
+			break;
 		case GlobalUtil.CMD_3:
-			myCollection(user);
+			storeDetail(user);
 			break;
 		case GlobalUtil.CMD_4:
-			inviteCode(user);
+			operateStore(user);
 			break;
 		case GlobalUtil.CMD_5:
-			cashBack(user);
+			QRCode(user);
 			break;
 		case GlobalUtil.CMD_6:
-			signIn(user);
-			break;
-		case GlobalUtil.CMD_7:
-			integralStatistics(user);
-			break;
-		case GlobalUtil.CMD_8:
-			feedBack(user);
+			feedback(user);
 			break;
 		default:
 			MyLogUtil.print("未知 CMD，执行默认方法!");
@@ -66,91 +60,54 @@ public class Handle1Impl extends BaseHandle implements HandleInterface{
 		}
 	}
 	
-	
-	
-	/**
-	 * 用户登录
-	 * 
-	 * 短信登录
-	 */
-	public void login() {
-		HmUser user = (HmUser) object;
-		System.out.println("用户登录");
-	}
-	
-	/**
-	 * 用户注册 
-	 * @param user
-	 * 
-	 * 短信注册
-	 */
-	public void regist(HmUser user) {
-		System.out.println("用户注册");
-	}
 
 	/**
-	 * 获取我的收藏
+	 * 申请入驻
 	 * @param user
 	 */
-	public void myCollection(HmUser user) {
+	public void regist(HmUser user) {
 		
 	}
 	
 	/**
-	 * 获取邀请码
+	 * 短信登录
 	 * @param user
 	 */
-	public void inviteCode(HmUser user) {
+	public void login(HmUser user) {
 		
 	}
 	
 	/**
-	 * 获取我的返现
+	 * 获取店铺资料
 	 * @param user
 	 */
-	public void cashBack(HmUser user) {
+	public void storeDetail(HmUser user) {
 		
 	}
 	
 	/**
-	 * 签到
+	 * 修改店铺资料
 	 * @param user
 	 */
-	public void signIn(HmUser user) {
+	public void operateStore(HmUser user) {
 		
 	}
 	
 	/**
-	 * 统计积分
+	 * 获取店铺二维码
 	 * @param user
 	 */
-	public void integralStatistics(HmUser user) {
+	public void QRCode(HmUser user) {
 		
 	}
 	
 	/**
-	 * 意见反馈
+	 * 意见与反馈
 	 * @param user
 	 */
-	public void feedBack(HmUser user) {
+	public void feedback(HmUser user) {
 		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	

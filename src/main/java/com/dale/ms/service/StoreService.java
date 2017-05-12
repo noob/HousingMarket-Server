@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
  * @description 
  */
 
-@Service("userService")
-public interface UserService {
+@Service("storeService")
+public interface StoreService {
 
 }

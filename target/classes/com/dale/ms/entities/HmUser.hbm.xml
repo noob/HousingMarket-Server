@@ -79,5 +79,15 @@
                 <comment>商家联系方式</comment>
             </column>
         </property>
+        <property name="getuiClientId" type="java.lang.String">
+            <column name="GETUI_CLIENT_ID" length="100">
+                <comment>个推clientid</comment>
+            </column>
+        </property>
+        <property name="deviceInfo" type="java.lang.String">
+            <column name="DEVICE_INFO" length="10">
+                <comment>客户端类型</comment>
+            </column>
+        </property>
     </class>
 </hibernate-mapping>

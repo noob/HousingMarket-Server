@@ -5,8 +5,18 @@ package com.dale.ms.handle;
 
 import java.util.Map;
 
+<<<<<<< HEAD
 import com.dale.ms.entities.HmUser;
+<<<<<<< HEAD
 import com.dale.ms.service.UserService;
+=======
+=======
+<<<<<<< HEAD
+import com.dale.ms.entities.HmUser;
+=======
+>>>>>>> f42e15d758185e880610f91deb685ded138090ec
+>>>>>>> 889a63e94037a79381ccdfe442f90f5073d73704
+>>>>>>> 141436243474dfee36a70341663322d157819f89
 import com.dale.ms.service.impl.MainServiceImpl;
 import com.dale.ms.utils.GlobalUtil;
 import com.dale.ms.utils.MyLogUtil;
@@ -37,6 +47,7 @@ public class Handle1Impl extends BaseHandle implements HandleInterface{
 		HmUser user = (HmUser) object;
 		switch (cmd) {
 		case GlobalUtil.CMD_1:
+<<<<<<< HEAD
 			login();
 			break;
 		case GlobalUtil.CMD_2:
@@ -59,6 +70,20 @@ public class Handle1Impl extends BaseHandle implements HandleInterface{
 			break;
 		case GlobalUtil.CMD_8:
 			feedBack(user);
+=======
+			resultData = "shake it, shake it";
+<<<<<<< HEAD
+			HmUser user = (HmUser) object;
+			System.out.println(user.getMobile());
+			
+=======
+<<<<<<< HEAD
+			HmUser user = (HmUser) object;
+			System.out.println(user.getMobile());
+=======
+>>>>>>> f42e15d758185e880610f91deb685ded138090ec
+>>>>>>> 889a63e94037a79381ccdfe442f90f5073d73704
+>>>>>>> 141436243474dfee36a70341663322d157819f89
 			break;
 		default:
 			MyLogUtil.print("未知 CMD，执行默认方法!");
@@ -168,7 +193,15 @@ public class Handle1Impl extends BaseHandle implements HandleInterface{
 		case GlobalUtil.CMD_1:
 			backData = resultData; //将业务运行结果赋值给返回值
 			break;
+<<<<<<< HEAD
 			
+=======
+<<<<<<< HEAD
+			
+=======
+
+>>>>>>> f42e15d758185e880610f91deb685ded138090ec
+>>>>>>> 889a63e94037a79381ccdfe442f90f5073d73704
 		default:
 			MyLogUtil.print("未知 CMD，执行默认方法!");
 			break;

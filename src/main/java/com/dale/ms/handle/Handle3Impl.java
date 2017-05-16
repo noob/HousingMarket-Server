@@ -5,16 +5,22 @@ package com.dale.ms.handle;
 
 import java.util.Map;
 
+<<<<<<< HEAD
 import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
+=======
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 import com.dale.ms.entities.HmOrder;
 import com.dale.ms.entities.HmUser;
 import com.dale.ms.service.OrderService;
 import com.dale.ms.service.impl.MainServiceImpl;
+<<<<<<< HEAD
 import com.dale.ms.service.impl.OrderServiceImpl;
+=======
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 import com.dale.ms.utils.GlobalUtil;
 import com.dale.ms.utils.MyLogUtil;
 
@@ -29,9 +35,13 @@ public class Handle3Impl extends BaseHandle implements HandleInterface{
 	private int cmd;
 	private String resultData;
 	
+<<<<<<< HEAD
 	public Handle3Impl() {
 		super();
 	}
+=======
+	
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 	
 	public Handle3Impl(Map<String, Object> contents, int cmd, OrderService orderService) {
 		this.contents = contents;
@@ -44,10 +54,16 @@ public class Handle3Impl extends BaseHandle implements HandleInterface{
 	 */
 	public void parseContent() {
 		HmOrder order = (HmOrder) object;
+<<<<<<< HEAD
 		System.out.println(order.getBuyerMobile());
 		switch (cmd) {
 		case GlobalUtil.CMD_1:
 			create(order);
+=======
+		switch (cmd) {
+		case GlobalUtil.CMD_1:
+			
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 			break;
 
 		default:
@@ -58,6 +74,7 @@ public class Handle3Impl extends BaseHandle implements HandleInterface{
 	
 	/**
 	 * 创建订单
+<<<<<<< HEAD
 	 * @param order 
 	 */
 	private void create(HmOrder order) {
@@ -103,6 +120,20 @@ public class Handle3Impl extends BaseHandle implements HandleInterface{
 	private void deleteOrder(HmOrder order) {
 		orderService.deleteOrder(order);
 	}
+=======
+	 * @param order
+	 */
+	public void create(HmOrder order) {
+
+	}
+	
+	
+	
+	
+	
+	
+	
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 	
 	
 	

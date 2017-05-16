@@ -25,7 +25,10 @@ public class HmOrder implements java.io.Serializable {
 	private Timestamp orderRefundTime;
 	private Timestamp orderConfirmTime;
 	private Timestamp orderCompleteTime;
+<<<<<<< HEAD
 	private Integer orderStatus;
+=======
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 	private String buyerMobile;
 	private String address;
 	private String manJian;
@@ -56,9 +59,14 @@ public class HmOrder implements java.io.Serializable {
 			Double orderPrice, Double sendPrice, Timestamp orderCreateTime,
 			Timestamp orderPayTime, Timestamp orderRefuseTime,
 			Timestamp orderRefundTime, Timestamp orderConfirmTime,
+<<<<<<< HEAD
 			Timestamp orderCompleteTime, Integer orderStatus,
 			String buyerMobile, String address, String manJian, String manFan,
 			String manSong) {
+=======
+			Timestamp orderCompleteTime, String buyerMobile, String address,
+			String manJian, String manFan, String manSong) {
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 		this.userId = userId;
 		this.orderGoodsId = orderGoodsId;
 		this.storeId = storeId;
@@ -73,7 +81,10 @@ public class HmOrder implements java.io.Serializable {
 		this.orderRefundTime = orderRefundTime;
 		this.orderConfirmTime = orderConfirmTime;
 		this.orderCompleteTime = orderCompleteTime;
+<<<<<<< HEAD
 		this.orderStatus = orderStatus;
+=======
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 		this.buyerMobile = buyerMobile;
 		this.address = address;
 		this.manJian = manJian;
@@ -203,6 +214,7 @@ public class HmOrder implements java.io.Serializable {
 		this.orderCompleteTime = orderCompleteTime;
 	}
 
+<<<<<<< HEAD
 	public Integer getOrderStatus() {
 		return this.orderStatus;
 	}
@@ -211,6 +223,8 @@ public class HmOrder implements java.io.Serializable {
 		this.orderStatus = orderStatus;
 	}
 
+=======
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 	public String getBuyerMobile() {
 		return this.buyerMobile;
 	}

@@ -11,7 +11,10 @@ import org.springframework.stereotype.Service;
  * @description 
  */
 
+<<<<<<< HEAD
 @Service("storeService")
+=======
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 public class StoreServiceImpl {
 
 	

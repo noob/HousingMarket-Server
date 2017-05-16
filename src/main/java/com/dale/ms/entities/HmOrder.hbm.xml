@@ -80,11 +80,14 @@
                 <comment>订单完成时间</comment>
             </column>
         </property>
+<<<<<<< HEAD
         <property name="orderStatus" type="java.lang.Integer">
             <column name="ORDER_STATUS">
                 <comment>订单状态</comment>
             </column>
         </property>
+=======
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
         <property name="buyerMobile" type="java.lang.String">
             <column name="BUYER_MOBILE" length="20">
                 <comment>买家联系方式</comment>

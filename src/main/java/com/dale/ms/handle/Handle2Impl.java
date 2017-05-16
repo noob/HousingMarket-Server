@@ -5,9 +5,15 @@ package com.dale.ms.handle;
 
 import java.util.Map;
 
+<<<<<<< HEAD
 import com.dale.ms.entities.HmStore;
 import com.dale.ms.service.StoreService;
 import com.dale.ms.service.impl.StoreServiceImpl;
+=======
+import com.dale.ms.entities.HmUser;
+import com.dale.ms.service.StoreService;
+import com.dale.ms.service.impl.MainServiceImpl;
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 import com.dale.ms.utils.GlobalUtil;
 import com.dale.ms.utils.MyLogUtil;
 
@@ -34,6 +40,7 @@ public class Handle2Impl extends BaseHandle implements HandleInterface{
 	 *   商家程序入口
 	 */
 	public void parseContent() {
+<<<<<<< HEAD
 		HmStore store = (HmStore) object;
 		switch (cmd) {
 		case GlobalUtil.CMD_1:
@@ -56,6 +63,27 @@ public class Handle2Impl extends BaseHandle implements HandleInterface{
 			break;
 		case GlobalUtil.CMD_7:
 			getOrderList(store);
+=======
+		HmUser user = (HmUser) object;
+		switch (cmd) {
+		case GlobalUtil.CMD_1:
+			regist(user);
+			break;
+		case GlobalUtil.CMD_2:
+			login(user);
+			break;
+		case GlobalUtil.CMD_3:
+			storeDetail(user);
+			break;
+		case GlobalUtil.CMD_4:
+			operateStore(user);
+			break;
+		case GlobalUtil.CMD_5:
+			QRCode(user);
+			break;
+		case GlobalUtil.CMD_6:
+			feedback(user);
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 			break;
 		default:
 			MyLogUtil.print("未知 CMD，执行默认方法!");
@@ -68,7 +96,11 @@ public class Handle2Impl extends BaseHandle implements HandleInterface{
 	 * 申请入驻
 	 * @param user
 	 */
+<<<<<<< HEAD
 	private void regist(HmStore store) {
+=======
+	public void regist(HmUser user) {
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 		
 	}
 	
@@ -76,7 +108,11 @@ public class Handle2Impl extends BaseHandle implements HandleInterface{
 	 * 短信登录
 	 * @param user
 	 */
+<<<<<<< HEAD
 	private void login(HmStore store) {
+=======
+	public void login(HmUser user) {
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 		
 	}
 	
@@ -84,7 +120,11 @@ public class Handle2Impl extends BaseHandle implements HandleInterface{
 	 * 获取店铺资料
 	 * @param user
 	 */
+<<<<<<< HEAD
 	private void storeDetail(HmStore store) {
+=======
+	public void storeDetail(HmUser user) {
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 		
 	}
 	
@@ -92,7 +132,11 @@ public class Handle2Impl extends BaseHandle implements HandleInterface{
 	 * 修改店铺资料
 	 * @param user
 	 */
+<<<<<<< HEAD
 	private void operateStore(HmStore store) {
+=======
+	public void operateStore(HmUser user) {
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 		
 	}
 	
@@ -100,7 +144,11 @@ public class Handle2Impl extends BaseHandle implements HandleInterface{
 	 * 获取店铺二维码
 	 * @param user
 	 */
+<<<<<<< HEAD
 	private void QRCode(HmStore store) {
+=======
+	public void QRCode(HmUser user) {
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 		
 	}
 	
@@ -108,6 +156,7 @@ public class Handle2Impl extends BaseHandle implements HandleInterface{
 	 * 意见与反馈
 	 * @param user
 	 */
+<<<<<<< HEAD
 	private void feedback(HmStore store) {
 		
 	}
@@ -128,6 +177,12 @@ public class Handle2Impl extends BaseHandle implements HandleInterface{
 	
 	
 	
+=======
+	public void feedback(HmUser user) {
+		
+	}
+	
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 	
 	
 	

@@ -26,8 +26,21 @@ public class HmUser implements java.io.Serializable {
 	private String storeAddress;
 	private String storeName;
 	private String storeMobile;
+<<<<<<< HEAD
 	private String getuiClientId;
 	private String deviceInfo;
+=======
+<<<<<<< HEAD
+	private String getuiClientId;
+	private String deviceInfo;
+=======
+<<<<<<< HEAD
+	private String getuiClientId;
+	private String deviceInfo;
+=======
+>>>>>>> 889a63e94037a79381ccdfe442f90f5073d73704
+>>>>>>> 141436243474dfee36a70341663322d157819f89
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 
 	// Constructors
 
@@ -47,8 +60,22 @@ public class HmUser implements java.io.Serializable {
 			Integer gender, String idCard, Timestamp createTime, String mobile,
 			String address, Timestamp lastLoginTime, Long storeId,
 			Integer isStore, String bussinessLicense, String storeAddress,
+<<<<<<< HEAD
 			String storeName, String storeMobile, String getuiClientId,
 			String deviceInfo) {
+=======
+<<<<<<< HEAD
+			String storeName, String storeMobile, String getuiClientId,
+			String deviceInfo) {
+=======
+<<<<<<< HEAD
+			String storeName, String storeMobile, String getuiClientId,
+			String deviceInfo) {
+=======
+			String storeName, String storeMobile) {
+>>>>>>> 889a63e94037a79381ccdfe442f90f5073d73704
+>>>>>>> 141436243474dfee36a70341663322d157819f89
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 		this.userName = userName;
 		this.password = password;
 		this.userImg = userImg;
@@ -64,8 +91,21 @@ public class HmUser implements java.io.Serializable {
 		this.storeAddress = storeAddress;
 		this.storeName = storeName;
 		this.storeMobile = storeMobile;
+<<<<<<< HEAD
 		this.getuiClientId = getuiClientId;
 		this.deviceInfo = deviceInfo;
+=======
+<<<<<<< HEAD
+		this.getuiClientId = getuiClientId;
+		this.deviceInfo = deviceInfo;
+=======
+<<<<<<< HEAD
+		this.getuiClientId = getuiClientId;
+		this.deviceInfo = deviceInfo;
+=======
+>>>>>>> 889a63e94037a79381ccdfe442f90f5073d73704
+>>>>>>> 141436243474dfee36a70341663322d157819f89
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 	}
 
 	// Property accessors
@@ -198,6 +238,13 @@ public class HmUser implements java.io.Serializable {
 		this.storeMobile = storeMobile;
 	}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 141436243474dfee36a70341663322d157819f89
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 	public String getGetuiClientId() {
 		return this.getuiClientId;
 	}
@@ -214,4 +261,12 @@ public class HmUser implements java.io.Serializable {
 		this.deviceInfo = deviceInfo;
 	}
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 889a63e94037a79381ccdfe442f90f5073d73704
+>>>>>>> 141436243474dfee36a70341663322d157819f89
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
 }

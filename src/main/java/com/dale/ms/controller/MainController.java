@@ -29,8 +29,6 @@ public class MainController extends GenericController{
 	public static final String ERROR = "error";
 	public static Object lock = new Object();
 	
-	@Autowired
-	@Qualifier("taskDistribution")
 	public static TaskDistribution taskDistribution = new TaskDistribution();
 	
 	@RequestMapping(value = "/request")

@@ -15,7 +15,7 @@ import com.dale.ms.entities.HmOrder;
  * @description 
  */
 
-public interface UserService {
-
+public interface MainService {
+	
 	
 }

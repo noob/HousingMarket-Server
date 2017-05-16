@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import com.dale.ms.model.ADMIN_SESSION_KEY;
 import com.dale.ms.model.Pagenation;
 import com.dale.ms.utils.GlobalUtil;
+import com.dale.ms.utils.PrimaryGenerater;
 import com.dale.ms.utils.ThreadPoolUtil;
+import com.dale.test.PrimaryGeneraterTest;
 import com.google.gson.Gson;
 
 /**
@@ -29,6 +31,8 @@ public class GenericController {
 	protected  HttpServletResponse response;
 	
 	public Pagenation pagenation = new Pagenation();
+	//启动订单流水号工具
+	public static PrimaryGenerater primaryGenerater = PrimaryGenerater.getInstance();
 	
 	@ModelAttribute  
 	public void createThreadPool() {

@@ -10,8 +10,9 @@ import org.springframework.stereotype.Service;
  * @date 2017-5-2 下午1:57:40
  * @description 
  */
-@Service("mainService")
-public class MainServiceImpl {
+
+@Service("userService")
+public class UserServiceImpl {
 
 	
 	

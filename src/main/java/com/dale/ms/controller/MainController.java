@@ -1,7 +1,8 @@
 package com.dale.ms.controller;
 
-import java.util.Map;
 import java.util.UUID;
+
+import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -10,11 +11,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.dale.ms.controller.generic.GenericController;
 import com.dale.ms.dataparse.impl.HttpDataParseImpl;
 import com.dale.ms.handle.TaskDistribution;
+import com.dale.ms.service.impl.MainServiceImpl;
+import com.dale.ms.service.impl.OrderServiceImpl;
+import com.dale.ms.service.impl.StoreServiceImpl;
+import com.dale.ms.service.impl.UserServiceImpl;
 import com.dale.ms.status.TaskStatus;
 import com.dale.ms.status.TaskStatusMap;
 import com.dale.ms.utils.HttpUtil;
 import com.dale.ms.utils.ThreadPoolUtil;
-import com.google.gson.Gson;
 
 /**
  * 
@@ -28,10 +32,19 @@ public class MainController extends GenericController{
 	public static final String SUCCESS = "success";
 	public static final String ERROR = "error";
 	public static Object lock = new Object();
-	
-	@Autowired
-	@Qualifier("taskDistribution")
 	public static TaskDistribution taskDistribution = new TaskDistribution();
+	
+	@Resource(name="mainService")
+	private MainServiceImpl mainService;
+	
+	@Resource(name="userService")
+	private UserServiceImpl userService;
+	
+	@Resource(name="storeService")
+	private StoreServiceImpl storeService;
+	
+	@Resource(name="orderService")
+	private OrderServiceImpl orderService;
 	
 	@RequestMapping(value = "/request")
 	public void Request() {
@@ -43,7 +56,10 @@ public class MainController extends GenericController{
 				
 				@Override
 				public void run() {
-					taskDistribution.taskAnalysisAndDistribute(httpDataParseImpl, uuid);
+					// 由于spring和线程的关系 @Resource 注解只能写在线程外 所以在这将所有  service 传入
+					//@Resource 写在线程内 无效 为null
+					taskDistribution.taskAnalysisAndDistribute(httpDataParseImpl, uuid,mainService, userService, storeService, orderService);
+//					taskDistribution.taskAnalysisAndDistribute(httpDataParseImpl, uuid);
 				}
 			}));
 			

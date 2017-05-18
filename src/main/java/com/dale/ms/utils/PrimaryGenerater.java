@@ -20,6 +20,7 @@ public class PrimaryGenerater {
 
 	private static final String SERIAL_NUMBER = "XXXX"; // 流水号格式
 	private static PrimaryGenerater primaryGenerater = null;
+	private static String currentNumber = null;
 
 	private PrimaryGenerater() {
 	}
@@ -34,6 +35,7 @@ public class PrimaryGenerater {
 			synchronized (PrimaryGenerater.class) {
 				if (primaryGenerater == null) {
 					primaryGenerater = new PrimaryGenerater();
+					System.out.println("currentNumber = " + currentNumber);
 				}
 			}
 		}
@@ -43,12 +45,11 @@ public class PrimaryGenerater {
 	/**
 	 * 生成下一个编号
 	 */
-	public synchronized String generaterNextNumber(String sno) {
-		String id = null;
+	public synchronized String generaterNextNumber() {
 		Date date = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMdd");
-		if (sno == null) {
-			id = formatter.format(date) + "0001";
+		if (currentNumber == null) {
+			currentNumber = formatter.format(date) + "0001";
 		} else {
 			int count = SERIAL_NUMBER.length();
 			StringBuilder sb = new StringBuilder();
@@ -56,9 +57,9 @@ public class PrimaryGenerater {
 				sb.append("0");
 			}
 			DecimalFormat df = new DecimalFormat("0000");
-			id = formatter.format(date)
-					+ df.format(1 + Integer.parseInt(sno.substring(8, 12)));
+			currentNumber = formatter.format(date) + df.format(1 + Integer.parseInt(currentNumber.substring(8, 12)));
 		}
-		return id;
+		return currentNumber;
 	}
+	
 }

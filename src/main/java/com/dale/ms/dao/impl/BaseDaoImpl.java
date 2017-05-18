@@ -23,7 +23,7 @@ import com.dale.ms.model.Pagenation;
  * @description
  */
 @Transactional
-public abstract class BaseDaoImpl {
+public class BaseDaoImpl {
 
 	@Autowired
 	@Qualifier("sessionFactory")

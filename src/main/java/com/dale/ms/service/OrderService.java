@@ -3,6 +3,10 @@
  */
 package com.dale.ms.service;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
 import java.util.Map;
 
 import org.springframework.stereotype.Service;
@@ -10,15 +14,29 @@ import org.springframework.stereotype.Service;
 import com.dale.ms.entities.HmOrder;
 import com.dale.ms.entities.HmStore;
 import com.dale.ms.entities.HmUser;
+<<<<<<< HEAD
 import com.dale.ms.service.base.BaseService;
 
+=======
+
+=======
+import org.springframework.stereotype.Service;
+
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
 /**
  * @author Dale'
  * @date 2017-5-12 下午1:23:41
  * @description 
  */
+<<<<<<< HEAD
 
 public interface OrderService extends BaseService{
+=======
+<<<<<<< HEAD
+
+public interface OrderService {
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
 	
 	/**
 	 * 买家创建订单
@@ -54,4 +72,12 @@ public interface OrderService extends BaseService{
 	  * @return
 	  */
 	 Map<String, String> deleteOrder(HmOrder order);
+<<<<<<< HEAD
+=======
+=======
+@Service("orderService")
+public interface OrderService {
+
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
 }

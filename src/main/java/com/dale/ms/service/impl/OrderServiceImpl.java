@@ -3,6 +3,10 @@
  */
 package com.dale.ms.service.impl;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,12 +24,23 @@ import com.dale.ms.utils.PrimaryGenerater;
 import com.dale.ms.utils.StringUtil;
 import com.google.gson.Gson;
 
+<<<<<<< HEAD
+=======
+=======
+import org.springframework.stereotype.Service;
+
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
 /**
  * @author Dale'
  * @date 2017-5-2 下午1:57:40
  * @description 
  */
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
 @Service("orderService")
 public class OrderServiceImpl implements OrderService{
 
@@ -43,7 +58,11 @@ public class OrderServiceImpl implements OrderService{
 		order.setOrderTradeNo(PrimaryGenerater.getInstance().generaterNextNumber()); //设置 订单流水号
 		order.setOrderCreateTime(StringUtil.getTime()); //订单创建时间
 		order.setOrderStatus(GlobalUtil.NO_PAY);
+<<<<<<< HEAD
 //		orderDao.save(order); //写入数据库
+=======
+		orderDao.save(order); //写入数据库
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
 	
 		//将订单推送到商家
 //		HmStore store = (HmStore) orderDao.getResultOne("from HmStore o where o.storeId = ?", new Object[]{order.getStoreId()});
@@ -99,5 +118,14 @@ public class OrderServiceImpl implements OrderService{
 	}
 
 	 
+<<<<<<< HEAD
+=======
+=======
+
+public class OrderServiceImpl {
+
+	
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
 	
 }

@@ -26,6 +26,8 @@ public class HmUser implements java.io.Serializable {
 	private String storeAddress;
 	private String storeName;
 	private String storeMobile;
+	private String getuiClientId;
+	private String deviceInfo;
 
 	// Constructors
 
@@ -45,7 +47,8 @@ public class HmUser implements java.io.Serializable {
 			Integer gender, String idCard, Timestamp createTime, String mobile,
 			String address, Timestamp lastLoginTime, Long storeId,
 			Integer isStore, String bussinessLicense, String storeAddress,
-			String storeName, String storeMobile) {
+			String storeName, String storeMobile, String getuiClientId,
+			String deviceInfo) {
 		this.userName = userName;
 		this.password = password;
 		this.userImg = userImg;
@@ -61,6 +64,8 @@ public class HmUser implements java.io.Serializable {
 		this.storeAddress = storeAddress;
 		this.storeName = storeName;
 		this.storeMobile = storeMobile;
+		this.getuiClientId = getuiClientId;
+		this.deviceInfo = deviceInfo;
 	}
 
 	// Property accessors
@@ -191,6 +196,22 @@ public class HmUser implements java.io.Serializable {
 
 	public void setStoreMobile(String storeMobile) {
 		this.storeMobile = storeMobile;
+	}
+
+	public String getGetuiClientId() {
+		return this.getuiClientId;
+	}
+
+	public void setGetuiClientId(String getuiClientId) {
+		this.getuiClientId = getuiClientId;
+	}
+
+	public String getDeviceInfo() {
+		return this.deviceInfo;
+	}
+
+	public void setDeviceInfo(String deviceInfo) {
+		this.deviceInfo = deviceInfo;
 	}
 
 }

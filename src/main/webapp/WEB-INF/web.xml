@@ -34,8 +34,8 @@
 	<filter>
 		<filter-name>openSessionInViewFilter</filter-name>
 		<filter-class>org.springframework.orm.hibernate4.support.OpenSessionInViewFilter</filter-class>
-		<!-- <init-param> <param-name>singleSession</param-name> <param-value>true</param-value> 
-			</init-param> -->
+		<!-- --><init-param> <param-name>singleSession</param-name> <param-value>true</param-value> 
+			</init-param> 
 	</filter>
 	<filter-mapping>
 		<filter-name>openSessionInViewFilter</filter-name>
@@ -66,6 +66,12 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
+	<!-- <servlet>
+	    <servlet-name>initAppContext</servlet-name>
+	    <servlet-class>com.dale.util.InitAppContext</servlet-class>
+	    <load-on-startup>1</load-on-startup>
+	  </servlet>
+ -->
 	<!-- 配置session超时时间，单位分钟 -->
 	<session-config>
 		<session-timeout>30</session-timeout>

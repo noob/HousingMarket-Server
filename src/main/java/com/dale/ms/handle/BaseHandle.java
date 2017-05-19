@@ -6,6 +6,7 @@ package com.dale.ms.handle;
 import java.util.Map;
 
 import com.dale.ms.utils.MyLogUtil;
+import com.google.gson.Gson;
 
 /**
  * @author Dale'
@@ -17,6 +18,7 @@ public abstract class BaseHandle {
 	protected Object object = null;
 	protected Map<String, Object> contents; // 包含IP等信息
 	protected String backData = null; // 即将返回给客户端的数据
+	public Gson gson = new Gson();
 	
 	/**
 	 * 处理数据

@@ -14,7 +14,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import com.dale.ms.model.ADMIN_SESSION_KEY;
 import com.dale.ms.model.Pagenation;
 import com.dale.ms.utils.GlobalUtil;
+import com.dale.ms.utils.PrimaryGenerater;
 import com.dale.ms.utils.ThreadPoolUtil;
+import com.dale.test.PrimaryGeneraterTest;
+import com.dale.util.InitAppContext;
 import com.google.gson.Gson;
 
 /**
@@ -29,14 +32,24 @@ public class GenericController {
 	protected  HttpServletResponse response;
 	
 	public Pagenation pagenation = new Pagenation();
+	//启动订单流水号工具
+	public static PrimaryGenerater primaryGenerater = PrimaryGenerater.getInstance();
+	
+//	public InitAppContext appContext;
+//	
+//	@ModelAttribute  
+//	private void initSpringContext() throws Exception {
+//		appContext = new InitAppContext();
+//		appContext.init();
+//	}
 	
 	@ModelAttribute  
-	public void createThreadPool() {
+	private void createThreadPool() {
 		ThreadPoolUtil.init();
 	}
 	
 	@ModelAttribute  
-    public void setRequestAndReseponse(HttpServletRequest request, HttpServletResponse response) {
+	private void setRequestAndReseponse(HttpServletRequest request, HttpServletResponse response) {
         this.request = request;  
         this.response = response;  
     } 

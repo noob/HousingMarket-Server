@@ -7,12 +7,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import com.dale.ms.controller.generic.GenericController;
-import com.dale.ms.entities.TUser;
 import com.dale.ms.utils.HttpUtil;
 import com.google.gson.Gson;
-import com.wordnik.swagger.annotations.ApiOperation;
 
 
 /**
@@ -32,9 +29,8 @@ public class ApiController extends GenericController{
 	@ResponseBody
 	 public void findById(@PathVariable String userId){
 	        System.out.println("get "+userId);
-	        TUser user = new TUser();
-	        user.setRealName("Mr.H");
-	        HttpUtil.responsePrintMsg(response, gson.toJson(user));
+//	        user.setRealName("Mr.H");
+//	        HttpUtil.responsePrintMsg(response, gson.toJson(user));
 	    }
 	
 }

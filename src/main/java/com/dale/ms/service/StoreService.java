@@ -16,7 +16,7 @@ import com.dale.ms.service.base.BaseService;
  * @description 
  */
 
-public interface UserService extends BaseService{
+public interface StoreService extends BaseService{
 
 	
 }

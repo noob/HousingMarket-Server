@@ -32,13 +32,6 @@ public class DataParseBase implements Serializable {
 	// 使用HttpServletRequest初始化数据
 	public void initData(HttpServletRequest request) throws Exception {
 		type = request.getParameter("type");
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-		System.out.println(type);
->>>>>>> f42e15d758185e880610f91deb685ded138090ec
->>>>>>> 889a63e94037a79381ccdfe442f90f5073d73704
 		contents.put("ip", NetUtil.getIpAddress(request));
 		inputObject = HttpUtil.ParseDataToMap(request);
 	}

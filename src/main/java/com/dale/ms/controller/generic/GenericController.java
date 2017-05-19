@@ -17,14 +17,8 @@ import com.dale.ms.utils.GlobalUtil;
 import com.dale.ms.utils.PrimaryGenerater;
 import com.dale.ms.utils.ThreadPoolUtil;
 import com.dale.test.PrimaryGeneraterTest;
-<<<<<<< HEAD
 import com.dale.util.InitAppContext;
-=======
-<<<<<<< HEAD
 import com.dale.util.InitAppContext;
-=======
->>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
->>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 import com.google.gson.Gson;
 
 /**
@@ -41,10 +35,6 @@ public class GenericController {
 	public Pagenation pagenation = new Pagenation();
 	//启动订单流水号工具
 	public static PrimaryGenerater primaryGenerater = PrimaryGenerater.getInstance();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 	
 //	public InitAppContext appContext;
 //	
@@ -53,11 +43,6 @@ public class GenericController {
 //		appContext = new InitAppContext();
 //		appContext.init();
 //	}
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
->>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 	
 	@ModelAttribute  
 	private void createThreadPool() {

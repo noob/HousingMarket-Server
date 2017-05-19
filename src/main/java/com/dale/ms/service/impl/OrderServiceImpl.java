@@ -3,6 +3,13 @@
  */
 package com.dale.ms.service.impl;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,21 +21,43 @@ import com.dale.ms.dao.OrderDao;
 import com.dale.ms.entities.HmOrder;
 import com.dale.ms.entities.HmStore;
 import com.dale.ms.service.OrderService;
+<<<<<<< HEAD
 import com.dale.ms.service.base.BaseServiceImpl;
+=======
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 import com.dale.ms.utils.GeTuiUtil;
 import com.dale.ms.utils.GlobalUtil;
 import com.dale.ms.utils.PrimaryGenerater;
 import com.dale.ms.utils.StringUtil;
 import com.google.gson.Gson;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+import org.springframework.stereotype.Service;
+
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 /**
  * @author Dale'
  * @date 2017-5-2 下午1:57:40
  * @description 
  */
 
+<<<<<<< HEAD
 @Service("orderService")
 public class OrderServiceImpl {
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
+@Service("orderService")
+public class OrderServiceImpl implements OrderService{
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 
 	@Autowired
 	@Qualifier("orderDao")
@@ -39,11 +68,23 @@ public class OrderServiceImpl {
 	 * @param order
 	 * @return
 	 */
+<<<<<<< HEAD
+=======
+	@Override
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 	public Map<String, String> create(HmOrder order) {
 		order.setOrderTradeNo(PrimaryGenerater.getInstance().generaterNextNumber()); //设置 订单流水号
 		order.setOrderCreateTime(StringUtil.getTime()); //订单创建时间
 		order.setOrderStatus(GlobalUtil.NO_PAY);
+<<<<<<< HEAD
 		orderDao.save(order); //写入数据库
+=======
+<<<<<<< HEAD
+//		orderDao.save(order); //写入数据库
+=======
+		orderDao.save(order); //写入数据库
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 	
 		//将订单推送到商家
 //		HmStore store = (HmStore) orderDao.getResultOne("from HmStore o where o.storeId = ?", new Object[]{order.getStoreId()});
@@ -63,6 +104,10 @@ public class OrderServiceImpl {
 	  * @param order
 	  * @return
 	  */
+<<<<<<< HEAD
+=======
+	@Override
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 	public Map<String, String> confirmReceive(HmOrder order) {
 		return null;
 	}
@@ -72,6 +117,10 @@ public class OrderServiceImpl {
 	  * @param order
 	  * @return
 	  */
+<<<<<<< HEAD
+=======
+	@Override
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 	public Map<String, String> acceptOrder(HmOrder order) {
 		return null;
 	}
@@ -81,6 +130,10 @@ public class OrderServiceImpl {
 	  * @param order
 	  * @return
 	  */
+<<<<<<< HEAD
+=======
+	@Override
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 	public Map<String, String> cancelOrder(HmOrder order) {
 		return null;
 	}
@@ -90,11 +143,28 @@ public class OrderServiceImpl {
 	  * @param order
 	  * @return
 	  */
+<<<<<<< HEAD
+=======
+	@Override
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 	public Map<String, String> deleteOrder(HmOrder order) {
 		return null;
 	}
 
+<<<<<<< HEAD
 	
 	
+=======
+	 
+<<<<<<< HEAD
+=======
+=======
+
+public class OrderServiceImpl {
+
+	
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 	
 }

@@ -20,13 +20,37 @@ public class GeTuiUtil {
 
 	public static void main(String[] args) {
 		try {
+<<<<<<< HEAD
 //			push("Android");
+=======
+<<<<<<< HEAD
+//			push("Android");
+=======
+<<<<<<< HEAD
+//			push("Android");
+=======
+			push("Android");
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
 	
+<<<<<<< HEAD
 	public static void push(String clientId, String content, String deviceInfo) throws Exception {
+=======
+<<<<<<< HEAD
+	public static void push(String clientId, String content, String deviceInfo) throws Exception {
+=======
+<<<<<<< HEAD
+	public static void push(String clientId, String content, String deviceInfo) throws Exception {
+=======
+	public static void push(String deviceInfo) throws Exception {
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 		String appId = getConfig("APP_ID", deviceInfo);
 		String appkey = getConfig("APP_KEY", deviceInfo);
 		String masterSecret = getConfig("MASTER", deviceInfo);
@@ -39,7 +63,19 @@ public class GeTuiUtil {
 		
 		ITemplate template = null;
 		if (deviceInfo.contains("Android")) {
+<<<<<<< HEAD
 			template = getAndriodTransmissionTemplate(content, appId, appkey);
+=======
+<<<<<<< HEAD
+			template = getAndriodTransmissionTemplate(content, appId, appkey);
+=======
+<<<<<<< HEAD
+			template = getAndriodTransmissionTemplate(content, appId, appkey);
+=======
+			template = getAndriodTransmissionTemplate(appId, appkey);
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 		}
 		message.setOffline(true);
 		// 离线有效时间，单位为毫秒，可选
@@ -49,8 +85,22 @@ public class GeTuiUtil {
 		
 		Target target = new Target();
         target.setAppId(appId);
+<<<<<<< HEAD
         //"f6c9acef2a733c3d24a7c9f1d1783e64"
         target.setClientId(clientId);
+=======
+<<<<<<< HEAD
+        //"f6c9acef2a733c3d24a7c9f1d1783e64"
+        target.setClientId(clientId);
+=======
+<<<<<<< HEAD
+        //"f6c9acef2a733c3d24a7c9f1d1783e64"
+        target.setClientId(clientId);
+=======
+        target.setClientId("f6c9acef2a733c3d24a7c9f1d1783e64");
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
         // 用户别名推送，cid和用户别名只能2者选其一
 //         String alias = "商家端";
 //         target.setAlias(alias);
@@ -75,13 +125,37 @@ public class GeTuiUtil {
 	 * Andriod 透传消息模板
 	 * @return
 	 */
+<<<<<<< HEAD
 	public static TransmissionTemplate getAndriodTransmissionTemplate(String content, String appId, String appkey) throws Exception{
+=======
+<<<<<<< HEAD
+	public static TransmissionTemplate getAndriodTransmissionTemplate(String content, String appId, String appkey) throws Exception{
+=======
+<<<<<<< HEAD
+	public static TransmissionTemplate getAndriodTransmissionTemplate(String content, String appId, String appkey) throws Exception{
+=======
+	public static TransmissionTemplate getAndriodTransmissionTemplate(String appId, String appkey) throws Exception{
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 		TransmissionTemplate template = new TransmissionTemplate();
 	    template.setAppId(appId);
 	    template.setAppkey(appkey);
 	    // 透传消息设置，1为强制启动应用，客户端接收到消息后就会立即启动应用；2为等待应用启动
 	    template.setTransmissionType(2);
+<<<<<<< HEAD
 	    template.setTransmissionContent(content);
+=======
+<<<<<<< HEAD
+	    template.setTransmissionContent(content);
+=======
+<<<<<<< HEAD
+	    template.setTransmissionContent(content);
+=======
+	    template.setTransmissionContent("我是一只胡龙呱，呱呱呱");
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 	    // 设置定时展示时间
 //	     template.setDuration("2017-01-16 11:40:00", "2018-01-16 12:24:00");
 	    return template;

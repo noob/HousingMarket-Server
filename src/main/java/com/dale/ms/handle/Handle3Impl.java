@@ -5,16 +5,42 @@ package com.dale.ms.handle;
 
 import java.util.Map;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 import com.dale.ms.entities.HmOrder;
 import com.dale.ms.entities.HmUser;
 import com.dale.ms.service.OrderService;
 import com.dale.ms.service.impl.MainServiceImpl;
+<<<<<<< HEAD
 import com.dale.ms.service.impl.OrderServiceImpl;
+=======
+<<<<<<< HEAD
+import com.dale.ms.service.impl.OrderServiceImpl;
+=======
+<<<<<<< HEAD
+import com.dale.ms.service.impl.OrderServiceImpl;
+=======
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 import com.dale.ms.utils.GlobalUtil;
 import com.dale.ms.utils.MyLogUtil;
 
@@ -25,6 +51,10 @@ import com.dale.ms.utils.MyLogUtil;
  */
 public class Handle3Impl extends BaseHandle implements HandleInterface{
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 	private OrderServiceImpl orderService;
 	private int cmd;
 	private String resultData;
@@ -41,6 +71,27 @@ public class Handle3Impl extends BaseHandle implements HandleInterface{
 		if(orderService == null) {
 			System.out.println("传过来的orderService为空");
 		}
+<<<<<<< HEAD
+=======
+=======
+	private OrderService orderService;
+	private int cmd;
+	private String resultData;
+	
+<<<<<<< HEAD
+	public Handle3Impl() {
+		super();
+	}
+=======
+	
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
+	
+	public Handle3Impl(Map<String, Object> contents, int cmd, OrderService orderService) {
+		this.contents = contents;
+		this.cmd = cmd;
+		this.orderService = orderService;
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 	}
 
 	/**
@@ -48,10 +99,28 @@ public class Handle3Impl extends BaseHandle implements HandleInterface{
 	 */
 	public void parseContent() {
 		HmOrder order = (HmOrder) object;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 		System.out.println(order.getBuyerMobile());
 		switch (cmd) {
 		case GlobalUtil.CMD_1:
 			create(order);
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+		switch (cmd) {
+		case GlobalUtil.CMD_1:
+			
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 			break;
 
 		default:
@@ -62,12 +131,36 @@ public class Handle3Impl extends BaseHandle implements HandleInterface{
 	
 	/**
 	 * 创建订单
+<<<<<<< HEAD
 	 * @param order 
 	 */
 	private void create(HmOrder order) {
 //		 将得到的MAP结果gson
 		Map<String, String> map = orderService.create(order);
 		resultData = gson.toJson(map);
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
+	 * @param order 
+	 */
+	private void create(HmOrder order) {
+		// 将得到的MAP结果gson
+<<<<<<< HEAD
+//		if(orderService == null) {
+//			System.out.println("orderservice is null");
+//		}
+//		Map<String, String> map = orderService.create(order);
+//		resultData = gson.toJson(map);
+=======
+		if(orderService == null) {
+			System.out.println("orderservice is null");
+		}
+		Map<String, String> map = orderService.create(order);
+		resultData = gson.toJson(map);
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 	}
 	
 	/**
@@ -104,6 +197,26 @@ public class Handle3Impl extends BaseHandle implements HandleInterface{
 	private void deleteOrder(HmOrder order) {
 		orderService.deleteOrder(order);
 	}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+	 * @param order
+	 */
+	public void create(HmOrder order) {
+
+	}
+	
+	
+	
+	
+	
+	
+	
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 	
 	
 	

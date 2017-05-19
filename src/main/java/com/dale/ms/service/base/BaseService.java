@@ -10,6 +10,9 @@ package com.dale.ms.service.base;
  */
 public interface BaseService {
 
+<<<<<<< HEAD
 	public void test();
 	
+=======
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 }

@@ -25,18 +25,7 @@ public class HmOrder implements java.io.Serializable {
 	private Timestamp orderRefundTime;
 	private Timestamp orderConfirmTime;
 	private Timestamp orderCompleteTime;
-<<<<<<< HEAD
 	private Integer orderStatus;
-=======
-<<<<<<< HEAD
-	private Integer orderStatus;
-=======
-<<<<<<< HEAD
-	private Integer orderStatus;
-=======
->>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
->>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
->>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 	private String buyerMobile;
 	private String address;
 	private String manJian;
@@ -67,26 +56,9 @@ public class HmOrder implements java.io.Serializable {
 			Double orderPrice, Double sendPrice, Timestamp orderCreateTime,
 			Timestamp orderPayTime, Timestamp orderRefuseTime,
 			Timestamp orderRefundTime, Timestamp orderConfirmTime,
-<<<<<<< HEAD
 			Timestamp orderCompleteTime, Integer orderStatus,
 			String buyerMobile, String address, String manJian, String manFan,
 			String manSong) {
-=======
-<<<<<<< HEAD
-			Timestamp orderCompleteTime, Integer orderStatus,
-			String buyerMobile, String address, String manJian, String manFan,
-			String manSong) {
-=======
-<<<<<<< HEAD
-			Timestamp orderCompleteTime, Integer orderStatus,
-			String buyerMobile, String address, String manJian, String manFan,
-			String manSong) {
-=======
-			Timestamp orderCompleteTime, String buyerMobile, String address,
-			String manJian, String manFan, String manSong) {
->>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
->>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
->>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 		this.userId = userId;
 		this.orderGoodsId = orderGoodsId;
 		this.storeId = storeId;
@@ -101,18 +73,7 @@ public class HmOrder implements java.io.Serializable {
 		this.orderRefundTime = orderRefundTime;
 		this.orderConfirmTime = orderConfirmTime;
 		this.orderCompleteTime = orderCompleteTime;
-<<<<<<< HEAD
 		this.orderStatus = orderStatus;
-=======
-<<<<<<< HEAD
-		this.orderStatus = orderStatus;
-=======
-<<<<<<< HEAD
-		this.orderStatus = orderStatus;
-=======
->>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
->>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
->>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 		this.buyerMobile = buyerMobile;
 		this.address = address;
 		this.manJian = manJian;
@@ -242,13 +203,6 @@ public class HmOrder implements java.io.Serializable {
 		this.orderCompleteTime = orderCompleteTime;
 	}
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
->>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 	public Integer getOrderStatus() {
 		return this.orderStatus;
 	}
@@ -257,14 +211,6 @@ public class HmOrder implements java.io.Serializable {
 		this.orderStatus = orderStatus;
 	}
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
->>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
->>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
 	public String getBuyerMobile() {
 		return this.buyerMobile;
 	}

@@ -251,4 +251,8 @@ public class HmOrder implements java.io.Serializable {
 		this.manSong = manSong;
 	}
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 1352eeba75cbfdc2ede505b36294327e10f6cd11

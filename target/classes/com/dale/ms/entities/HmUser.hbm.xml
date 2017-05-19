@@ -79,6 +79,22 @@
                 <comment>商家联系方式</comment>
             </column>
         </property>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 141436243474dfee36a70341663322d157819f89
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
+>>>>>>> 1352eeba75cbfdc2ede505b36294327e10f6cd11
         <property name="getuiClientId" type="java.lang.String">
             <column name="GETUI_CLIENT_ID" length="100">
                 <comment>个推clientid</comment>
@@ -89,5 +105,22 @@
                 <comment>客户端类型</comment>
             </column>
         </property>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 889a63e94037a79381ccdfe442f90f5073d73704
+>>>>>>> 141436243474dfee36a70341663322d157819f89
+>>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
+>>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
+>>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
+>>>>>>> 1352eeba75cbfdc2ede505b36294327e10f6cd11
     </class>
 </hibernate-mapping>

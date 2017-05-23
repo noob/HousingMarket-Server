@@ -18,10 +18,6 @@ import com.dale.ms.utils.PrimaryGenerater;
 import com.dale.ms.utils.ThreadPoolUtil;
 import com.dale.test.PrimaryGeneraterTest;
 import com.dale.util.InitAppContext;
-<<<<<<< HEAD
-=======
-import com.dale.util.InitAppContext;
->>>>>>> 1352eeba75cbfdc2ede505b36294327e10f6cd11
 import com.google.gson.Gson;
 
 /**

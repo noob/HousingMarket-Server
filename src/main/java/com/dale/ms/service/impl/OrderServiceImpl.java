@@ -46,12 +46,12 @@ public class OrderServiceImpl {
 		orderDao.save(order); //写入数据库
 	
 		//将订单推送到商家
-//		HmStore store = (HmStore) orderDao.getResultOne("from HmStore o where o.storeId = ?", new Object[]{order.getStoreId()});
-//		try {
-//			GeTuiUtil.push(store.getStoreId() + "", order.getOrderTradeNo(), store.getDeviceInfo());
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
+		HmStore store = (HmStore) orderDao.getResultOne("from HmStore o where o.storeId = ?", new Object[]{order.getStoreId()});
+		try {
+			GeTuiUtil.push(store.getStoreId() + "", order.getOrderTradeNo(), store.getDeviceInfo());
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("order_trade_no", order.getOrderTradeNo());

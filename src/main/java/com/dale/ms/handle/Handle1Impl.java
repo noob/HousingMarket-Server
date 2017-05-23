@@ -6,7 +6,6 @@ package com.dale.ms.handle;
 import java.util.Map;
 
 import com.dale.ms.entities.HmUser;
-import com.dale.ms.service.UserService;
 import com.dale.ms.service.impl.UserServiceImpl;
 import com.dale.ms.utils.GlobalUtil;
 import com.dale.ms.utils.MyLogUtil;
@@ -18,16 +17,16 @@ import com.dale.ms.utils.MyLogUtil;
  */
 public class Handle1Impl extends BaseHandle implements HandleInterface{
 
-	private UserServiceImpl uerService;
+	private UserServiceImpl userService;
 	private int cmd;
 	private String resultData;
 	
 	
 	
-	public Handle1Impl(Map<String, Object> contents, int cmd, UserServiceImpl uerService) {
+	public Handle1Impl(Map<String, Object> contents, int cmd, UserServiceImpl userService) {
 		this.contents = contents;
 		this.cmd = cmd;
-		this.uerService = uerService;
+		this.userService = userService;
 	}
 
 	/**
@@ -37,7 +36,7 @@ public class Handle1Impl extends BaseHandle implements HandleInterface{
 		HmUser user = (HmUser) object;
 		switch (cmd) {
 		case GlobalUtil.CMD_1:
-			login();
+			login(user);
 			break;
 		case GlobalUtil.CMD_2:
 			regist(user);
@@ -76,9 +75,10 @@ public class Handle1Impl extends BaseHandle implements HandleInterface{
 	 * 
 	 * 短信登录
 	 */
-	private void login() {
-		HmUser user = (HmUser) object;
+	private void login(HmUser user) {
 		System.out.println("用户登录");
+		Map<String, String> map = userService.login(user);
+		resultData = gson.toJson(map);
 	}
 	
 	/**
@@ -89,6 +89,9 @@ public class Handle1Impl extends BaseHandle implements HandleInterface{
 	 */
 	private void regist(HmUser user) {
 		System.out.println("用户注册");
+		Map<String, String> map = userService.regist(user);
+		resultData = gson.toJson(map);
+		
 	}
 
 	/**
@@ -96,7 +99,8 @@ public class Handle1Impl extends BaseHandle implements HandleInterface{
 	 * @param user
 	 */
 	private void myCollection(HmUser user) {
-		
+		Map<String, String> map = userService.myCollection(user);
+		resultData = gson.toJson(map);
 	}
 	
 	/**
@@ -104,7 +108,8 @@ public class Handle1Impl extends BaseHandle implements HandleInterface{
 	 * @param user
 	 */
 	private void inviteCode(HmUser user) {
-		
+		Map<String, String> map = userService.inviteCode(user);
+		resultData = gson.toJson(map);
 	}
 	
 	/**
@@ -112,7 +117,8 @@ public class Handle1Impl extends BaseHandle implements HandleInterface{
 	 * @param user
 	 */
 	private void cashBack(HmUser user) {
-		
+		Map<String, String> map = userService.cashBack(user);
+		resultData = gson.toJson(map);
 	}
 	
 	/**
@@ -120,7 +126,8 @@ public class Handle1Impl extends BaseHandle implements HandleInterface{
 	 * @param user
 	 */
 	private void signIn(HmUser user) {
-		
+		Map<String, String> map = userService.signIn(user);
+		resultData = gson.toJson(map);
 	}
 	
 	/**
@@ -128,7 +135,8 @@ public class Handle1Impl extends BaseHandle implements HandleInterface{
 	 * @param user
 	 */
 	private void integralStatistics(HmUser user) {
-		
+		Map<String, String> map = userService.integralStatistics(user);
+		resultData = gson.toJson(map);
 	}
 	
 	/**
@@ -136,14 +144,16 @@ public class Handle1Impl extends BaseHandle implements HandleInterface{
 	 * @param user
 	 */
 	private void feedBack(HmUser user) {
-		
+		Map<String, String> map = userService.feedBack(user);
+		resultData = gson.toJson(map);
 	}
 	
 	/**
 	 * 用户获取 订单列表
 	 */
 	private void getOrderList(HmUser user) {
-		
+		Map<String, String> map = userService.getOrderList(user);
+		resultData = gson.toJson(map);
 	}
 	
 	

@@ -69,7 +69,8 @@ public class Handle2Impl extends BaseHandle implements HandleInterface{
 	 * @param user
 	 */
 	private void regist(HmStore store) {
-		
+		Map<String, String> map = storeService.regist(store);
+		resultData = gson.toJson(map);
 	}
 	
 	/**
@@ -77,7 +78,8 @@ public class Handle2Impl extends BaseHandle implements HandleInterface{
 	 * @param user
 	 */
 	private void login(HmStore store) {
-		
+		Map<String, String> map = storeService.login(store);
+		resultData = gson.toJson(map);
 	}
 	
 	/**
@@ -85,7 +87,8 @@ public class Handle2Impl extends BaseHandle implements HandleInterface{
 	 * @param user
 	 */
 	private void storeDetail(HmStore store) {
-		
+		Map<String, String> map = storeService.storeDetail(store);
+		resultData = gson.toJson(map);
 	}
 	
 	/**
@@ -93,7 +96,8 @@ public class Handle2Impl extends BaseHandle implements HandleInterface{
 	 * @param user
 	 */
 	private void operateStore(HmStore store) {
-		
+		Map<String, String> map = storeService.operateStore(store);
+		resultData = gson.toJson(map);
 	}
 	
 	/**
@@ -101,7 +105,8 @@ public class Handle2Impl extends BaseHandle implements HandleInterface{
 	 * @param user
 	 */
 	private void QRCode(HmStore store) {
-		
+		Map<String, String> map = storeService.QRCode(store);
+		resultData = gson.toJson(map);
 	}
 	
 	/**
@@ -109,7 +114,8 @@ public class Handle2Impl extends BaseHandle implements HandleInterface{
 	 * @param user
 	 */
 	private void feedback(HmStore store) {
-		
+		Map<String, String> map = storeService.feedback(store);
+		resultData = gson.toJson(map);
 	}
 	
 	/**
@@ -117,7 +123,8 @@ public class Handle2Impl extends BaseHandle implements HandleInterface{
 	 * @param store
 	 */
 	private void getOrderList(HmStore store) {
-		
+		Map<String, String> map = storeService.getOrderList(store);
+		resultData = gson.toJson(map);
 	}
 	
 	

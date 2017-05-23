@@ -19,7 +19,6 @@ import com.dale.ms.entities.HmUser;
 import com.dale.ms.service.MainService;
 import com.dale.ms.service.OrderService;
 import com.dale.ms.service.StoreService;
-import com.dale.ms.service.UserService;
 import com.dale.ms.service.impl.MainServiceImpl;
 import com.dale.ms.service.impl.OrderServiceImpl;
 import com.dale.ms.service.impl.StoreServiceImpl;
@@ -97,12 +96,6 @@ public class TaskDistribution {
 				hIface = (HandleInterface) constructor.newInstance(new Object[] {dataParseBase.getContents(), cmd, storeService});
 				break;
 			case GlobalUtil.PORT_3:
-//				if(orderService == null) {
-//					System.out.println("taskDistribution 中 orderService为空");
-//				} else {
-//					System.out.println("taskDistribution 中 orderService不空");
-//					
-//				}
 				hIface = (HandleInterface) constructor.newInstance(new Object[] {dataParseBase.getContents(), cmd, orderService});
 				break;
 			default:

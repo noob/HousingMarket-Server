@@ -18,6 +18,7 @@ public class HmStore implements java.io.Serializable {
 	private String storeMobile;
 	private String storeImg;
 	private Timestamp createDate;
+	private String qrCode;
 	private String getuiClientId;
 	private String deviceInfo;
 
@@ -35,7 +36,8 @@ public class HmStore implements java.io.Serializable {
 	/** full constructor */
 	public HmStore(Long userId, String bussinessLicense, String storeAddress,
 			String storeName, String storeMobile, String storeImg,
-			Timestamp createDate, String getuiClientId, String deviceInfo) {
+			Timestamp createDate, String qrCode, String getuiClientId,
+			String deviceInfo) {
 		this.userId = userId;
 		this.bussinessLicense = bussinessLicense;
 		this.storeAddress = storeAddress;
@@ -43,6 +45,7 @@ public class HmStore implements java.io.Serializable {
 		this.storeMobile = storeMobile;
 		this.storeImg = storeImg;
 		this.createDate = createDate;
+		this.qrCode = qrCode;
 		this.getuiClientId = getuiClientId;
 		this.deviceInfo = deviceInfo;
 	}
@@ -111,6 +114,14 @@ public class HmStore implements java.io.Serializable {
 
 	public void setCreateDate(Timestamp createDate) {
 		this.createDate = createDate;
+	}
+
+	public String getQrCode() {
+		return this.qrCode;
+	}
+
+	public void setQrCode(String qrCode) {
+		this.qrCode = qrCode;
 	}
 
 	public String getGetuiClientId() {

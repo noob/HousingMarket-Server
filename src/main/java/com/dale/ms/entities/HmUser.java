@@ -214,8 +214,4 @@ public class HmUser implements java.io.Serializable {
 		this.deviceInfo = deviceInfo;
 	}
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 1352eeba75cbfdc2ede505b36294327e10f6cd11

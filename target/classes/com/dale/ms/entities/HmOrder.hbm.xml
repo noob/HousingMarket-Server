@@ -80,32 +80,11 @@
                 <comment>订单完成时间</comment>
             </column>
         </property>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
->>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
->>>>>>> 1352eeba75cbfdc2ede505b36294327e10f6cd11
         <property name="orderStatus" type="java.lang.Integer">
             <column name="ORDER_STATUS">
                 <comment>订单状态</comment>
             </column>
         </property>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 6655372f9e8d6c6c58bddc39817e4fdfc5aad381
->>>>>>> 8b524b034893a58123136e072f9c2d5db6b0173c
->>>>>>> e29539dff60f85419c4469ca27c1b309769013f3
->>>>>>> 1352eeba75cbfdc2ede505b36294327e10f6cd11
         <property name="buyerMobile" type="java.lang.String">
             <column name="BUYER_MOBILE" length="20">
                 <comment>买家联系方式</comment>

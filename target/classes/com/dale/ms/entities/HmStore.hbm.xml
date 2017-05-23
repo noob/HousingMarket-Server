@@ -41,7 +41,14 @@
             </column>
         </property>
         <property name="createDate" type="java.sql.Timestamp">
-            <column name="CREATE_DATE" length="19" />
+            <column name="CREATE_DATE" length="19">
+                <comment>建立时间</comment>
+            </column>
+        </property>
+        <property name="qrCode" type="java.lang.String">
+            <column name="QR_CODE">
+                <comment>店铺二维码</comment>
+            </column>
         </property>
         <property name="getuiClientId" type="java.lang.String">
             <column name="GETUI_CLIENT_ID" length="100">

@@ -44,7 +44,7 @@ public class GeTuiUtil {
 		message.setOffline(true);
 		// 离线有效时间，单位为毫秒，可选
 		message.setOfflineExpireTime(24 * 3600 * 1000);
-		message.setData(template);	
+		message.setData(template);
 		message.setPushNetWorkType(0); // 可选，判断是否客户端是否wifi环境下推送，1为在WIFI环境下，0为不限制网络环境。
 		
 		Target target = new Target();

@@ -33,7 +33,7 @@ public class GenericController {
 	
 	public Pagenation pagenation = new Pagenation();
 	//启动订单流水号工具
-	public static PrimaryGenerater primaryGenerater = PrimaryGenerater.getInstance();
+	public static PrimaryGenerater primaryGenerater = PrimaryGenerater.getInstance();  
 	
 //	public InitAppContext appContext;
 //	

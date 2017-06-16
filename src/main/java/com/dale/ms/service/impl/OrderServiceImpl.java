@@ -40,7 +40,8 @@ public class OrderServiceImpl {
 	 * @return
 	 */
 	public Map<String, String> create(HmOrder order) {
-		order.setOrderTradeNo(PrimaryGenerater.getInstance().generaterNextNumber()); //设置 订单流水号
+		String orderTradeNo = PrimaryGenerater.getInstance().generaterNextNumber();
+		order.setOrderTradeNo(orderTradeNo); //设置 订单流水号
 		order.setOrderCreateTime(StringUtil.getTime()); //订单创建时间
 		order.setOrderStatus(GlobalUtil.NO_PAY);
 		orderDao.save(order); //写入数据库
@@ -48,13 +49,13 @@ public class OrderServiceImpl {
 		//将订单推送到商家
 		HmStore store = (HmStore) orderDao.getResultOne("from HmStore o where o.storeId = ?", new Object[]{order.getStoreId()});
 		try {
-			GeTuiUtil.push(store.getStoreId() + "", order.getOrderTradeNo(), store.getDeviceInfo());
+			GeTuiUtil.push(store.getGetuiClientId() + "", orderTradeNo, store.getDeviceInfo());
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		
 		Map<String, String> map = new HashMap<String, String>();
-		map.put("order_trade_no", order.getOrderTradeNo());
+		map.put("order_trade_no", orderTradeNo);
 		return map;
 	}
 

@@ -105,8 +105,14 @@ public class StoreServiceImpl {
 	 * @return
 	 */
 	public Map<String, String> QRCode(HmStore store) {
-		
+		HmStore s = (HmStore) storeDao.getResultOne("from HmStore o where o.storeId = ?", new Object[]{store.getStoreId()});
 		Map<String, String> map = new HashMap<String, String>();
+		if (s.getQrCode() != null) {
+			map.put("qecode", s.getQrCode());
+			map.put("msg", "success");
+		} else {
+			map.put("msg", "fail");
+		}
 		return map;
 	}
 

@@ -70,6 +70,8 @@ public class Handle3Impl extends BaseHandle implements HandleInterface{
 		resultData = gson.toJson(map);
 	}
 	
+	
+	
 	/**
 	 * 确认收货
 	 * @param order

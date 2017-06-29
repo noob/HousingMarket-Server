@@ -51,9 +51,23 @@ public class Handle3Impl extends BaseHandle implements HandleInterface{
 		System.out.println(order.getBuyerMobile());
 		switch (cmd) {
 		case GlobalUtil.CMD_1:
-			create(order);
+			create(order); 			//创建订单
 			break;
-
+		case GlobalUtil.CMD_2:
+			acceptOrder(order); // 商家接单
+			break;
+		case GlobalUtil.CMD_3:
+			confirmReceive(order); // 买家确认收货
+			break;
+		case GlobalUtil.CMD_4:
+			cancelOrder(order); // 买家取消订单
+			break;
+		case GlobalUtil.CMD_5:
+			confirmRefund(order); // 商家确认用户退款  
+			break;
+		case GlobalUtil.CMD_6:
+			refuseOrder(order); // 商家拒接 并 结束订单
+			break;
 		default:
 			MyLogUtil.print("未知 CMD，执行默认方法!");
 			break;
@@ -106,6 +120,26 @@ public class Handle3Impl extends BaseHandle implements HandleInterface{
 	private void deleteOrder(HmOrder order) {
 		orderService.deleteOrder(order);
 	}
+	
+	/**
+	  * 商家确认用户退款  
+	  * @param order
+	  */
+	private void confirmRefund(HmOrder order) {
+		orderService.confirmRefund(order);
+	}
+	
+	/**
+	  * 商家拒接 并 结束订单
+	  * @param order
+	  */
+	private void refuseOrder(HmOrder order) {
+		orderService.refuseOrder(order);
+	}
+	
+	
+	
+	
 	
 	
 	

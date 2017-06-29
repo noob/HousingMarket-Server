@@ -5,7 +5,6 @@ DROP TABLE IF EXISTS `HM_ORDER`;
 CREATE TABLE `HM_ORDER` (
   `ORDER_ID` bigint(25) NOT NULL AUTO_INCREMENT,
   `USER_ID` bigint(25) NOT NULL COMMENT '用户ID',
-  `ORDER_GOODS_ID` bigint(25) NOT NULL COMMENT '订单商品表ID',
   `STORE_ID` bigint(25) DEFAULT NULL COMMENT '商家id',  
   `ORDER_TRADE_NO` varchar(20) NOT NULL COMMENT '订单编号',
   `PAYWAY` varchar(100) NOT NULL COMMENT '支付方式',
@@ -19,7 +18,15 @@ CREATE TABLE `HM_ORDER` (
   `ORDER_REFUND_TIME` timestamp  NULL COMMENT '退款时间',
   `ORDER_CONFIRM_TIME` timestamp  NULL COMMENT '确认收货时间',
   `ORDER_COMPLETE_TIME` timestamp  NULL COMMENT '订单完成时间',
-  ORDER_STATUS INTEGER(1) COMMENT '订单状态',
+  ORDER_STATUS INTEGER(2) COMMENT '订单状态',
+  -- 1 用户下单 商家未接单
+	-- 2 商家接单 等待送达
+	-- 3 用户确认收货 订单完成
+	-- 11 用户取消订单 申请退款 商家未确认
+  	-- 12 商家确认用户退款  
+	-- 13 订单已取消
+	-- 21 商家拒接 并 结束订单
+  GOOD_INFO TEXT NOT NULL COMMENT '订单的所有商品',
   
   `BUYER_MOBILE` varchar(20) DEFAULT NULL COMMENT '买家联系方式',
   `ADDRESS` varchar(255) DEFAULT NULL COMMENT '收货地址',
@@ -41,7 +48,7 @@ CREATE TABLE `HM_ORDER_GOODS` (
   CATE_ID  bigint(25) COMMENT '类别ID',    -- 类别ID 
   `GOODS_PRICE` DECIMAL(8,2) NOT NULL COMMENT '商品单价(取自商品表)',
   GOOD_NAME VARCHAR(255) NOT NULL COMMENT '单品名称',  -- 单品名称
-	GOOD_IMAGE VARCHAR(255) NOT NULL COMMENT '单品图片',  -- 单品图片
+	GOOD_IMAGE VARCHAR(255)  COMMENT '单品图片',  -- 单品图片
   `GOOD_COUNT` INTEGER NOT NULL COMMENT '商品数量，默认为 1', 	 -- 商品数量，默认为 1
   PRIMARY KEY (`ORDER_GOODS_ID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

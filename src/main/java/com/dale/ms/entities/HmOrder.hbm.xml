@@ -15,11 +15,6 @@
                 <comment>用户ID</comment>
             </column>
         </property>
-        <property name="orderGoodsId" type="java.lang.Long">
-            <column name="ORDER_GOODS_ID" not-null="true">
-                <comment>订单商品表ID</comment>
-            </column>
-        </property>
         <property name="storeId" type="java.lang.Long">
             <column name="STORE_ID">
                 <comment>商家id</comment>
@@ -83,6 +78,11 @@
         <property name="orderStatus" type="java.lang.Integer">
             <column name="ORDER_STATUS">
                 <comment>订单状态</comment>
+            </column>
+        </property>
+        <property name="goodInfo" type="java.lang.String">
+            <column name="GOOD_INFO" length="65535" not-null="true">
+                <comment>订单的所有商品</comment>
             </column>
         </property>
         <property name="buyerMobile" type="java.lang.String">

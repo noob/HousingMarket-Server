@@ -41,7 +41,7 @@
             </column>
         </property>
         <property name="goodImage" type="java.lang.String">
-            <column name="GOOD_IMAGE" not-null="true">
+            <column name="GOOD_IMAGE">
                 <comment>单品图片</comment>
             </column>
         </property>

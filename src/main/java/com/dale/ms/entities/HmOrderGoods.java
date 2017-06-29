@@ -26,11 +26,10 @@ public class HmOrderGoods implements java.io.Serializable {
 
 	/** minimal constructor */
 	public HmOrderGoods(Long orderId, Double goodsPrice, String goodName,
-			String goodImage, Integer goodCount) {
+			Integer goodCount) {
 		this.orderId = orderId;
 		this.goodsPrice = goodsPrice;
 		this.goodName = goodName;
-		this.goodImage = goodImage;
 		this.goodCount = goodCount;
 	}
 

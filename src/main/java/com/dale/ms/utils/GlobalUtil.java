@@ -48,10 +48,15 @@ public class GlobalUtil {
 	/**
 	 * 订单状态配置
 	 */
-	public static final int NO_PAY = 1;							//下单未付款
-	public static final int NO_ACCEPT_ORDER = 2;		//商家未接单
-	public static final int NO_RECEIVE = 3;					//买家未确认收货
-	public static final int IS_COMPLETE = 4;					//订单完成
+	public static final int NO_ACCEPT_ORDER = 1;		//用户下单 商家未接单
+	public static final int NO_RECEIVE = 2;					//商家接单 等待送达
+	public static final int IS_COMPLETE = 3;					//用户确认收货 订单完成
+	
+	public static final int BUYER_CANCEL_ORDER = 11;					// 用户取消订单 申请退款 商家未确认
+	public static final int SELLER_CONFIRM_REFUND = 12;					// 商家确认用户退款  
+	public static final int IS_FINISH = 13;											// 订单已取消
+	
+	public static final int REFUSE_ORDER = 21;								//  商家拒接 并 结束订单
 	
 	
 }
